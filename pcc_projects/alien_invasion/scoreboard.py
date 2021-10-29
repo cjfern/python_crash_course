@@ -17,7 +17,10 @@ class Scoreboard():
 		self.text_color = (30, 30, 30)
 		self.font = pygame.font.SysFont(None, 36)
 		
-		# Prepare the initial score images.
+		self.prep_images()
+
+	def prep_images(self):
+		"""Prepare the initial score images."""
 		self.prep_score()
 		self.prep_high_score()
 		self.prep_level()
@@ -59,6 +62,7 @@ class Scoreboard():
 		self.level_rect = self.level_image.get_rect()
 		self.level_rect.right = self.score_rect.right
 		self.level_rect.top = self.score_rect.bottom + 10
+	
 	
 	def prep_ships(self):
 		"""Show how many ships are left."""
